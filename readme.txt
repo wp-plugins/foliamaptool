@@ -39,8 +39,6 @@ Please [Contact me](http://www.foliamaptool.com) if you'd like to provide a tran
 
 == Installation ==
 
-See full [installation intructions and Documentation](http://www.foliamaptool.com)
-
 1. Unzip into a directory in `/wp-content/plugins/`, for example `/wp-content/plugins/foliamaptool-google-maps-for-wordpress.zip`.  Be sure to put all of the files in this directory.
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Enter your Foliamaptool API key and other options using the the 'Foliamaptool' menu - it's right under the standard 'Settings' menu.
