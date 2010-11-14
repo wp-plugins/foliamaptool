@@ -19,7 +19,7 @@ Author: Carsten Jonstrup
 // ----------------------------------------------------------------------------------
 class foliamaptool {
 	var $wordpress_tag = 'foliamaptool';    // tag assigned by wordpress.org
-	var $version = '1.0.0';
+	var $version = '1.0.1';
 	var $doc_link = 'http://www.foliamaptool.com';
 	var $bug_link = 'http://www.foliamaptool.com';
 	var $map_defaults = array ('api_key_developer' => '');
