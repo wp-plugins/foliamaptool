@@ -4,7 +4,7 @@ Donate link:
 Tags: google maps,google,map,maps,easy,poi,mapping,mapper,gps,lat,lon,latitude,longitude
 Requires at least: 2.7
 Tested up to: 3.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 
 Foliamaptool is the easiest way to create great-looking Google Maps and driving directions in your blog.
 
