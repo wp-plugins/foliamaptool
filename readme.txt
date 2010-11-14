@@ -14,7 +14,7 @@ Foliamaptool adds an interactive map to the wordpress editing screens.
 
 The plugin will automatically insert a great-looking interactive map into your blog. Your readers can get directions right in your blog and you can even create custom HTML for the map markers (including pictures, links, etc.)!
 
-* For questions and suggestions: [contact me](http://www.lenius.dk) or email me (carsten@lenius.dk) [Foliamaptool](http://www.foliamaptool.com)
+* For questions and suggestions: [contact me](http://www.foliamaptool.com) or email me (cj@folia.dk) [Foliamaptool](http://www.foliamaptool.com)
 
 = News =
 * Added StreetView
@@ -26,22 +26,20 @@ The plugin will automatically insert a great-looking interactive map into your b
 * And much more (see the release notes)
 
 
-**[Download now!](http://www.lenius.dk/foliamaptool)**
-
-[Home Page](http://www.lenius.dk/foliamaptool) |
-[Documentation](http://www.lenius.dk/foliamaptool-documentation) |
-[FAQ](http://www.lenius.dk/foliamaptool-faq) |
-[Support](http://www.lenius.dk/foliamaptool-faq)
+[Home Page](http://www.foliamaptool.com) |
+[Documentation](http://www.foliamaptool.com) |
+[FAQ](http://www.foliamaptool.com) |
+[Support](www.foliamaptool.com)
 
 = Localization =
-Please [Contact me](http://www.lenius.dk) if you'd like to provide a translation or an update.  Special thanks to:
+Please [Contact me](http://www.foliamaptool.com) if you'd like to provide a translation or an update.  Special thanks to:
 
 * Michael Gram - Folia A/S
 
 
 == Installation ==
 
-See full [installation intructions and Documentation](http://www.lenius.dk/foliamaptool-documentation)
+See full [installation intructions and Documentation](http://www.foliamaptool.com)
 
 1. Unzip into a directory in `/wp-content/plugins/`, for example `/wp-content/plugins/foliamaptool-google-maps-for-wordpress.zip`.  Be sure to put all of the files in this directory.
 1. Activate the plugin through the 'Plugins' menu in WordPress
@@ -50,7 +48,7 @@ See full [installation intructions and Documentation](http://www.lenius.dk/folia
 
 == Frequently Asked Questions ==
 
-Please read the **[FAQ](http://www.wphostreviews.com/foliamaptool-faq)**
+Please read the **[FAQ](http://www.foliamaptool.com)**
 
 == Screenshots ==
 
