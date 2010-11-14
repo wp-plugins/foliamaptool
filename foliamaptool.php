@@ -29,8 +29,9 @@ class foliamaptool {
 
 
 
-	function foliamaptool()  {
-		global $wpdb, $wp_version;
+	function foliamaptool(){
+
+        global $wpdb, $wp_version;
 
 		// This plugin doesn't work for feeds!
 		if (is_feed())
@@ -58,7 +59,7 @@ class foliamaptool {
 		add_action('wp_head', array(&$this, 'hook_head'));
 
 		// Uninstall
-		register_uninstall_hook(__FILE__, array(&$this, 'hook_uninstall'));
+		//register_uninstall_hook(__FILE__, array(&$this, 'hook_uninstall'));
 	}
 
 	/**
