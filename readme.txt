@@ -39,7 +39,7 @@ Please [Contact me](http://www.foliamaptool.com) if you'd like to provide a tran
 
 == Installation ==
 
-1. Unzip into a directory in `/wp-content/plugins/`, for example `/wp-content/plugins/foliamaptool-google-maps-for-wordpress.zip`.  Be sure to put all of the files in this directory.
+1. Unzip into a directory in `/wp-content/plugins/`, for example `/wp-content/plugins/foliamaptool.zip`.  Be sure to put all of the files in this directory.
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Enter your Foliamaptool API key and other options using the the 'Foliamaptool' menu - it's right under the standard 'Settings' menu.
 1. That's it - now you'll see a Foliamaptool meta box in in the 'edit posts' screen.  You can use it to add maps to your posts just by entering the address to display and an (optional) comment for that address.
