@@ -2,7 +2,7 @@
 /*
 Plugin Name: Foliamaptool Easy Google Maps
 Plugin URI: http://www.foliamaptool.com
-Author URI: http://www.foliamaptool.com
+Author URI: http://www.lenius.dk
 Description: Foliamaptool makes it easy to insert Google Maps in WordPress posts and pages.
 Version: 1.0.0
 Author: Carsten Jonstrup
