@@ -10,11 +10,11 @@ Foliamaptool is the easiest way to create great-looking Google Maps and driving 
 
 == Description ==
 
-foliamaptool adds an interactive map to the wordpress editing screens.
+Foliamaptool adds an interactive map to the wordpress editing screens.
 
 The plugin will automatically insert a great-looking interactive map into your blog. Your readers can get directions right in your blog and you can even create custom HTML for the map markers (including pictures, links, etc.)!
 
-* For questions and suggestions: [contact me](http://www.lenius.dk) using the web form or email me (carsten@lenius.dk)
+* For questions and suggestions: [contact me](http://www.lenius.dk) or email me (carsten@lenius.dk) [Foliamaptool](http://www.foliamaptool.com)
 
 = News =
 * Added StreetView
@@ -57,6 +57,6 @@ Please read the **[FAQ](http://www.wphostreviews.com/foliamaptool-faq)**
 1. Options screen
 
 
-1.0 (2010-11-11)
+1.0 (2010-11-14)
 =
 * Initial version
