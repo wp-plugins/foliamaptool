@@ -10,6 +10,8 @@
 // Admin functions for options screen
 // *********************************************************************
 
+var foliamaptool_maps = new Array;
+
 // Check if API is valid
 function mappCheckAPI() {
 	var apiKey = document.getElementById('api_key');
@@ -61,7 +63,65 @@ jQuery(document).ready(function($){
 
 // Insert foliamaptool shortcode in post
 function foliamapInsertShortCode () {
-	shortcode = "[foliamaptool]";
-	send_to_editor(shortcode);
-	return false;
+	//shortcode = "[foliamaptool]";
+	//send_to_editor(shortcode);
+
+    var id = jQuery("select#foliamaptool_maps").val();
+
+    //alert(foliamaptool_maps[id].mapUrl);
+
+    send_to_editor('<iframe src="'+foliamaptool_maps[id].mapUrl+'" width="'+foliamaptool_maps[id].mapWidth+'" height="'+foliamaptool_maps[id].mapHeight+'"></iframe>');
+
+
+
+    return false;
 }
+
+
+function populateMaps(key){
+
+ foliamaptool_maps.length = 0;
+
+ jQuery.getJSON("http://api.FoliamapTool.com/v3/maps/?apiKey="+key+"&format=json&callback=?",function(data){
+
+
+ var combo = document.getElementById("foliamaptool_maps");
+
+ jQuery("#combo").find('option').remove();
+
+ jQuery.each(data.data, function(i,map){
+
+ var option = document.createElement("option");
+ option.text = map.mapName;
+ option.value = map.mapId;
+
+ foliamaptool_maps[map.mapId] = map;
+
+ try {
+ combo.add(option, null); //Standard
+ }catch(error) {
+ combo.add(option); // IE only
+ }
+
+ });
+
+ });
+
+
+jQuery("select#foliamaptool_maps").change(function () {
+
+
+
+
+
+        });
+
+
+
+
+
+}
+
+
+
+

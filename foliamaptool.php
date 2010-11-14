@@ -322,7 +322,7 @@ class foliamaptool {
 		$this->map($map, $pois, true);
 
 		// The <div> will be filled in with the list of POIs
-		echo "<div id='admin_poi_div'></div>";
+		//echo "<div id='admin_poi_div'></div>";
 	}
 
 	function output_map_sizes($selected = "", $width = 0, $height = 0) {
@@ -350,68 +350,50 @@ class foliamaptool {
 
 	function map($map, $pois, $editable = false) {
 
-        $key = $this->get_array_option('api_key_developer', 'foliamaptool_options');
+        $apiKey = $this->get_array_option('api_key_developer', 'foliamaptool_options');
 
 
-        $maps = json_decode(file_get_contents("http://api.FoliamapTool.com/v3/maps/?apiKey=".$key."&format=json"));
+       // $maps = json_decode(file_get_contents("http://api.FoliamapTool.com/v3/maps/?apiKey=".$apiKey."&format=json"));
 
 
 		$map_args = $this->map_defaults;
 		$map_args = shortcode_atts($map_args, $this->get_array_option('map_options'));
 		$map_args = shortcode_atts($map_args, $map);
 
-		if ($editable) {
-			$map_name = 'editMap';
-			$map_args['editable'] = 1;
-		} else {
-			$map_name = 'foliamaptool' . $this->div_num;
-			$this->div_num++;
-			$map_args['editable'] = 0;
-		}
+        $args = array("mapname" => $map_name, "editable" => $map_args['editable']);
 
-
-		$args = array("mapname" => $map_name, "editable" => $map_args['editable'], "size" => $map_args['size'], "width" => $map_args['width'], "height" => $map_args['height'],
-		"zoom" => $map_args['zoom'], "centerLat" => $map_args['center_lat'], "centerLng" => $map_args['center_lng'],
-		"addressFormat" => $map_args['address_format'], "bigZoom" => $map_args['bigzoom'], "googlebar" => 0, 'scrollWheelZoom' => $map_args['scrollwheel_zoom'],
-		"language" => $map_args['language'], "mapTypes" => $map_args['maptypes'], "directions" => $map_args['directions'], "mapType" => $map_args['maptype'],
-		"streetView" => $map_args['streetview'], "traffic" => $map_args['traffic'], "initialOpenInfo" => $map_args['open_info'],
-		"defaultIcon" => $map_args['default_icon'], "pois" => $pois);
+        $editable = false;
 
 	     // If we couldn't encode just give up
 		if (empty($args))
 			return;
 
-		if ($editable) {
+
 			?>
 				<div>
-					<div style="float:right">
-                        <div><!--
-						    <a target='_blank' href='<?php echo $this->bug_link ?>'><?php _e('Report a bug', 'foliamaptool')?></a>
-						    | <a target='_blank' href='<?php echo $this->doc_link ?>'><?php _e('FoliaMapTool help', 'foliamaptool')?></a>
-                            | <a target='_blank' href='<?php echo $this->doc_link ?>'><?php _e('Get Api Key', 'foliamaptool')?></a>
-                        </div>
-                        <div>
-                            <input id='mapp_paypal' type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="donate" alt="PayPal - The safer, easier way to pay online!" />
-                            <br/>
-                            <b><?php echo __("Please donate today!", 'foliamaptool') ?></b>-->
-                        </div>
-					</div>
+
 
 					<p><b><?php _e('My maps', 'foliamaptool') ?></b></p>
 
 
                     <?php
                     echo "<pre>";
-                    //print_r($maps);
-                    echo "<select>";
-                    foreach($maps->data as $key => $item){
+                    //print_r($maps->data);
+                    echo "<select id=\"foliamaptool_maps\">";
+                    echo "<option><?php _e('Select', 'foliamaptool') ?></option>";
 
-                      echo "<option>".$item->mapName."</option>";
-                    }
                     echo "</select>";
 
                     echo "</pre>";
                     ?>
+
+
+                    <script>
+
+                    populateMaps('<?php echo $apiKey;?>');
+
+
+                    </script>
 
                     <br/><br/>
 
@@ -419,17 +401,13 @@ class foliamaptool {
 						<input type="button" id="foliamaptool_insert" value="<?php _e('Insert map shortcode in post &raquo;', 'foliamaptool'); ?>" />
 					</p>
 
+                    <p><i> <?php _e('Please switch to html view before inserting code ', 'foliamaptool'); ?></i></p>
+
 				</div>
 
 
 			<?php
 
-
-
-		// Display maps
-		} else {
-			return $map;
-		}
 	}
 
     function script($script) {
