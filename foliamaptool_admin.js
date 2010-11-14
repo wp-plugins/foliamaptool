@@ -82,14 +82,19 @@ function populateMaps(key){
 
  foliamaptool_maps.length = 0;
 
- jQuery.getJSON("http://api.FoliamapTool.com/v3/maps/?apiKey="+key+"&format=json&callback=?",function(data){
+ jQuery.getJSON("http://api.FoliamapTool.com/v3/maps/?apiKey="+key+"&format=json&callback=?",function(obj){
+
+
+ if (obj.data == null){
+   return;
+ }
 
 
  var combo = document.getElementById("foliamaptool_maps");
 
  jQuery("#combo").find('option').remove();
 
- jQuery.each(data.data, function(i,map){
+ jQuery.each(obj.data, function(i,map){
 
  var option = document.createElement("option");
  option.text = map.mapName;
