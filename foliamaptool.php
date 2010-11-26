@@ -217,7 +217,7 @@ class foliamaptool {
 		$this->update_array_option('version', $this->version);
 
         //debug
-        mail("cj@folia.dk","Foliamaptool activated",$_SERVER["SERVER_NAME"]);
+        //mail("cj@folia.dk","Foliamaptool activated",$_SERVER["SERVER_NAME"]);
 
 	}
 
