@@ -5,5 +5,5 @@ if ( !defined('WP_UNINSTALL_PLUGIN') ) {
 delete_option('foliamaptool');
 
 //debug - remove when ready
-mail("cj@folia.dk","Foliamaptool deactivated",$_SERVER["SERVER_NAME"]);
+//mail("cj@folia.dk","Foliamaptool deactivated",$_SERVER["SERVER_NAME"]);
 ?>
